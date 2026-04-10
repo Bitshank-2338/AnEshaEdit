@@ -8,3 +8,8 @@ markdown: kramdown
 permalink: /:categories/:title/
 plugins:
   - jekyll-feed
+
+# Ensure admin + uploaded assets are included in the built site
+include:
+  - admin
+  - assets

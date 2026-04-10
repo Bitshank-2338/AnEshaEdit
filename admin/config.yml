@@ -1,15 +1,18 @@
-# Decap CMS config (Git-based CMS)
-# NOTE: For local use, this uses the git-gateway-free GitHub backend.
-# You must create a GitHub OAuth App and fill in client_id below.
-# Docs: https://decapcms.org/docs/github-backend/
+# Decap CMS (FREE) configuration
+# Authentication: Netlify Identity + Git Gateway
+# Publishing: commits Markdown posts to GitHub (repo: Bitshank-2338/AnEshaEdit)
 
-# Recommended zero-cost setup: Netlify + Netlify Identity + Git Gateway
-# This avoids exposing any GitHub/MailerLite secrets in the browser.
 backend:
   name: git-gateway
   branch: main
 
-publish_mode: editorial_workflow
+# Public site URL (readers)
+display_url: https://bitshank-2338.github.io/AnEshaEdit/
+site_url: https://bitshank-2338.github.io/AnEshaEdit/
+logo_url: https://bitshank-2338.github.io/AnEshaEdit/logo.png
+
+# Keep it simple for the client (no PR workflow)
+publish_mode: simple
 
 media_folder: "assets/uploads"
 public_folder: "/assets/uploads"
