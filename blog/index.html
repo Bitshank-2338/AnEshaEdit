@@ -1,0 +1,67 @@
+---
+layout: default
+title: "AnEshaEdit | Blog"
+description: "Latest posts from AnEshaEdit."
+---
+
+<header id="main-header">
+  <div class="logo">
+    <a href="{{ '/' | relative_url }}"><img src="{{ '/logo.png' | relative_url }}" alt="AnEshaEdit Logo"></a>
+  </div>
+  <nav>
+    <ul>
+      <li><a href="{{ '/' | relative_url }}#editorial">Editorial</a></li>
+      <li><a href="{{ '/' | relative_url }}#lineage">Modern Lineage</a></li>
+      <li><a href="{{ '/' | relative_url }}#index">Material Index</a></li>
+      <li><a href="{{ '/' | relative_url }}#pinterest">Pinterest</a></li>
+      <li><a href="{{ '/blog/' | relative_url }}">Blog</a></li>
+      <li><a href="{{ '/newsletter.html' | relative_url }}">Newsletter</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main style="padding-top: 160px; padding-bottom: 120px;">
+  <section class="container visible">
+    <span class="grid-meta">Latest</span>
+    <h1 class="serif" style="font-size: 3rem; line-height: 1.1; margin-top: 12px;">The Blog</h1>
+    <p style="color: #666; margin-top: 12px; max-width: 70ch;">New posts published from the AnEshaEdit editorial desk.</p>
+
+    <div style="margin-top: 42px; display: grid; gap: 18px;">
+      {% for post in site.posts %}
+        <a href="{{ post.url | relative_url }}" style="display:block; padding: 18px 18px; border: 1px solid #efefef; border-radius: 10px; background: rgba(255,255,255,0.35);">
+          <div style="display:flex; justify-content: space-between; gap: 16px; align-items: baseline;">
+            <div>
+              <div class="grid-meta" style="margin-bottom: 6px;">{{ post.category | default: 'Editorial' }}</div>
+              <h2 class="serif" style="font-size: 1.8rem; line-height: 1.15; margin: 0;">{{ post.title }}</h2>
+            </div>
+            <div style="color:#999; font-size: 0.9rem; white-space: nowrap;">{{ post.date | date: "%b %d, %Y" }}</div>
+          </div>
+          {% if post.excerpt %}
+            <p style="color:#666; margin-top: 10px;">{{ post.excerpt | strip_html | strip_newlines | truncate: 160 }}</p>
+          {% endif %}
+          <span class="action-link" style="margin-top: 10px; display:inline-block;">Read</span>
+        </a>
+      {% endfor %}
+    </div>
+
+    <div style="margin-top: 46px;">
+      <div class="grid-meta">RSS</div>
+      <p style="color:#666; margin-top: 10px;">Subscribe via RSS: <a class="action-link" href="{{ '/feed.xml' | relative_url }}">feed.xml</a></p>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="container">
+    <h4 class="serif" style="font-size: 2rem; margin-bottom: 20px;">AnEshaEdit</h4>
+    <p style="color: #666; margin-bottom: 40px;">Intersection of Heritage and Modern Silhouette.</p>
+    <nav style="margin-bottom: 40px;">
+      <ul style="justify-content: center;">
+        <li><a href="#">Instagram</a></li>
+        <li><a href="#">Pinterest</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
+    <p style="font-size: 0.7rem; color: #999; letter-spacing: 0.1em;">&copy; 2026 ANESHAEDIT. ALL RIGHTS RESERVED.</p>
+  </div>
+</footer>
