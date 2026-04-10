@@ -1,13 +1,7 @@
+# Netlify (FREE) — CMS-only deploy (no Ruby build)
+# This avoids Netlify compiling Ruby/Jekyll. GitHub Pages remains the public site builder.
+# Netlify is used for: Identity + Git Gateway + Decap CMS at /admin.
+
 [build]
-  publish = "_site"
-  command = "bundle exec jekyll build"
-
-[build.environment]
-  RUBY_VERSION = "3.3.5"
-
-# Optional: set a canonical URL once you attach a custom domain
-# [[redirects]]
-#   from = "/*"
-#   to = "https://yourdomain.com/:splat"
-#   status = 301
-#   force = true
+  publish = "."
+  command = "echo 'Netlify CMS-only deploy (no build)'"
