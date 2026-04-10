@@ -3,12 +3,11 @@
 # You must create a GitHub OAuth App and fill in client_id below.
 # Docs: https://decapcms.org/docs/github-backend/
 
+# Recommended zero-cost setup: Netlify + Netlify Identity + Git Gateway
+# This avoids exposing any GitHub/MailerLite secrets in the browser.
 backend:
-  name: github
-  repo: Bitshank-2338/AnEshaEdit
+  name: git-gateway
   branch: main
-  base_url: https://api.github.com
-  auth_scope: repo
 
 publish_mode: editorial_workflow
 

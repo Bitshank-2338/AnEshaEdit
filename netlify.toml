@@ -1,0 +1,13 @@
+[build]
+  publish = "_site"
+  command = "bundle exec jekyll build"
+
+[build.environment]
+  RUBY_VERSION = "3.3.5"
+
+# Optional: set a canonical URL once you attach a custom domain
+# [[redirects]]
+#   from = "/*"
+#   to = "https://yourdomain.com/:splat"
+#   status = 301
+#   force = true
