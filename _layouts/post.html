@@ -1,0 +1,42 @@
+---
+layout: default
+---
+
+<header id="main-header">
+  <div class="logo">
+    <a href="{{ '/' | relative_url }}"><img src="{{ '/logo.png' | relative_url }}" alt="AnEshaEdit Logo"></a>
+  </div>
+  <nav>
+    <ul>
+      <li><a href="{{ '/' | relative_url }}#editorial">Editorial</a></li>
+      <li><a href="{{ '/' | relative_url }}#lineage">Modern Lineage</a></li>
+      <li><a href="{{ '/' | relative_url }}#index">Material Index</a></li>
+      <li><a href="{{ '/' | relative_url }}#pinterest">Pinterest</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main style="padding-top: 140px;">
+  <section class="container visible">
+    <span class="grid-meta">{{ page.category | default: 'Editorial' }}</span>
+    <h1 class="serif" style="font-size: 3rem; line-height: 1.1; margin-top: 12px;">{{ page.title }}</h1>
+    <p style="color: #666; margin-top: 16px; max-width: 70ch;">{{ page.excerpt }}</p>
+    <p style="margin-top: 10px; color:#888; font-size:0.9rem; letter-spacing:0.05em;">
+      {{ page.date | date: "%b %d, %Y" }}
+    </p>
+
+    {% if page.hero %}
+      <div style="margin-top: 36px;">
+        <img src="{{ page.hero | relative_url }}" alt="{{ page.title }}" style="width: 100%; border-radius: 8px;" loading="lazy" />
+      </div>
+    {% endif %}
+
+    <article style="margin-top: 42px; max-width: 78ch;">
+      {{ content }}
+    </article>
+
+    <div style="margin-top: 56px; border-top: 1px solid #efefef; padding-top: 28px;">
+      <a class="action-link" href="{{ '/' | relative_url }}">Back to Home</a>
+    </div>
+  </section>
+</main>

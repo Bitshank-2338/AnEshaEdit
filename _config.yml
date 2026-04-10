@@ -1,0 +1,10 @@
+title: AnEshaEdit
+email: hello@aneshaedit.com
+description: >-
+  A curated editorial exploration of Indian heritage, modern silhouettes, and ancestral textures.
+baseurl: "/AnEshaEdit"
+url: "https://bitshank-2338.github.io"
+markdown: kramdown
+permalink: /:categories/:title/
+plugins:
+  - jekyll-feed
