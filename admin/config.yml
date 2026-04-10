@@ -1,0 +1,31 @@
+# Decap CMS config (Git-based CMS)
+# NOTE: For local use, this uses the git-gateway-free GitHub backend.
+# You must create a GitHub OAuth App and fill in client_id below.
+# Docs: https://decapcms.org/docs/github-backend/
+
+backend:
+  name: github
+  repo: Bitshank-2338/AnEshaEdit
+  branch: main
+  base_url: https://api.github.com
+  auth_scope: repo
+
+publish_mode: editorial_workflow
+
+media_folder: "assets/uploads"
+public_folder: "/assets/uploads"
+
+collections:
+  - name: "posts"
+    label: "Posts"
+    folder: "_posts"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - { name: "layout", label: "Layout", widget: "hidden", default: "post" }
+      - { name: "title", label: "Title", widget: "string" }
+      - { name: "category", label: "Category", widget: "select", options: ["The Curated Edit", "Modern Lineage", "The Modern Boho", "Heritage Textures", "Shopping Guide"] }
+      - { name: "excerpt", label: "Excerpt", widget: "text" }
+      - { name: "hero", label: "Hero Image", widget: "image", required: false }
+      - { name: "date", label: "Publish Date", widget: "datetime" }
+      - { name: "body", label: "Body", widget: "markdown" }

@@ -1,6 +1,8 @@
 # AnEshaEdit
 
-AnEshaEdit is a visually elegant, modern heritage fashion blog inspired by the sophisticated editorial style of Who What Wear and the boutique aesthetic of Maison Boursier. The goal is to balance rich design elements with clean, high-quality layouts.
+Live site (GitHub Pages): https://bitshank-2338.github.io/AnEshaEdit/
+
+AnEshaEdit is a visually elegant, modern-heritage fashion blog inspired by the sophisticated editorial style of Who What Wear and the boutique aesthetic of Maison Boursier. The goal is to balance rich design elements with clean, high-quality layouts.
 
 ## Features
 - **Loader Screen**: An introductory screen with the logo, gracefully transitioning into the homepage.
